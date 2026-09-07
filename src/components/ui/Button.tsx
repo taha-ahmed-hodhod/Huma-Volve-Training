@@ -1,8 +1,26 @@
 import React from 'react'
 
-const Button = () => {
+interface Button {
+  text: string;
+  onClick: () => void;
+  variant: "primary" | "secondry" | "danger";
+  disabled?: boolean;
+}
+const Button = ({
+  text,
+  onClick,
+  variant,
+  disabled = false
+}: Button) => {
+
   return (
-    <div>Button</div>
+    <button 
+    onClick={onClick}
+    disabled={disabled}
+    className={`button ${variant}`}
+    >
+      {text}
+    </button>
   )
 }
 
