@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "./components/ui/Button";
 import "../src/App";
+import Card from "./components/ui/Card";
 
 const App = () => {
   return (
@@ -21,6 +22,12 @@ const App = () => {
         variant="secondry"
         onClick={() => alert("Register Clicked")}
       />
+
+      <div className="cards">
+        <Card title="Js Course" description="js course is uesful" image="src\assets\hero.png" children={<Button text="More..." variant="primary" onClick={() => alert("More Clicked")}/>} />
+      <Card title="React Course" description="react course is uesful" image="src\assets\hero.png" children={<Button text="More..." variant="primary" onClick={() => alert("More Clicked")}/>} />
+      <Card title="Angular Course" description="angular course is uesful" image="src\assets\hero.png" children={<Button text="More..." variant="primary" onClick={() => alert("More Clicked")}/>} />
+      </div>
     </div>
   );
 };
